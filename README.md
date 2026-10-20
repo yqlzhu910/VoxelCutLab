@@ -6,7 +6,7 @@
 
 Windows x64 桌面演示 · 中文交互 · 三维加工 · 算法单步讲解
 
-[快速上手](docs/QUICKSTART.md) · [功能与操作](docs/USER_GUIDE.md) · [版本说明](CHANGELOG.md)
+[下载 Windows 版](https://github.com/yqlzhu910/VoxelCutLab/releases/latest) · [快速上手](docs/QUICKSTART.md) · [功能与操作](docs/USER_GUIDE.md) · [版本说明](CHANGELOG.md)
 
 </div>
 
@@ -16,10 +16,12 @@ VoxelCutLab 是一个面向切削与磨削仿真的算法展示程序。你可�
 
 本仓库提供**展示资料与可运行软件**。软件为 Windows 便携版，解压即可使用；本仓库不包含项目源码。
 
+**v0.17 更新：** 新增 SparseOctree 表面重建和包含 62378 个刀位的球头刀加工算例。SparseOctree 与 Radial Dexel 均可查看重建网格；详细变化见 [版本说明](CHANGELOG.md)。
+
 ## 下载与启动
 
 1. 打开本仓库右侧的 **Releases**，进入最新发布版本。
-2. 在 **Assets** 中下载 **`VoxelCutLab-v0.16-windows-x64.zip`**。
+2. 在 **Assets** 中下载 **`VoxelCutLab-v0.17-windows-x64.zip`**。
 3. 将压缩包**完整解压**到一个可写目录，双击里面的 **`VoxelCutLab.exe`**。
 4. 默认进入「单步讲解」。点击底部「播放」，或点击「下一步」开始体验。
 
@@ -39,11 +41,13 @@ VoxelCutLab 是一个面向切削与磨削仿真的算法展示程序。你可�
 
 | 算法 | 展示重点 |
 |---|---|
-| **SparseOctree** | 稀疏八叉树、粗细区域与叶块体素判断 |
+| **SparseOctree** | 稀疏八叉树、粗细区域、叶块体素判断与最终表面重建 |
 | **Radial Dexel** | 径向材料区间、端点变化与三角网格重建 |
 | **邻接扩散体素** | 八叉树和均匀叶块、六方向邻接查询与扩散过程 |
 
 ## 看见算法的过程
+
+下方截图来自已有教学与径向演示；v0.17 的新增功能以版本说明和实际程序为准。
 
 ### 从空间层级到局部判断
 
@@ -59,7 +63,7 @@ VoxelCutLab 是一个面向切削与磨削仿真的算法展示程序。你可�
 
 ### 运行完整算例，查看实际统计
 
-内置原项目四工序、工件 2 和文献参数派生螺旋槽三个算例，分别包含 **4658 / 2502 / 3221** 个刀位。Radial Dexel 完成或停止测试后，可在点显示与重建网格之间切换。
+内置原项目四工序、工件 2、文献参数派生螺旋槽和球头刀加工四个算例，分别包含 **4658 / 2502 / 3221 / 62378** 个刀位。SparseOctree 与 Radial Dexel 完成或停止测试后，可在原显示与重建网格之间切换。
 
 ![性能测试界面](assets/benchmark.png)
 
